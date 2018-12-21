@@ -1,0 +1,42 @@
+# This file is the entry point to configure your own HTTP routes.
+# Files in the routes/ subdirectory configure the routes for your dependencies.
+
+#index:
+#    path: /
+#    defaults: { _controller: 'App\Controller\DefaultController::index' }
+
+app_containercontrolleur_init:
+  path: /container
+  controller: App\Controller\ContainerController::init
+
+app_containercontroller_initid:
+ path: /container/{id}
+ controller: App\Controller\ContainerController::initid
+
+app_containership_init:
+ path: /containership
+ controller: App\Controller\Containership::init
+
+app_containership_initid:
+  path: /containership/{id}
+  controller: App\Controller\Containership::initid
+
+app_product_init:
+  path: /product
+  controller: App\Controller\Product::init
+
+app_product_initid:
+  path: /product/{id}
+  controller: App\Controller\Product::initid
+
+#app_lucky_number:
+#  path: /lucky/number
+#  controller: App\Controller\LuckyController::number
+#
+#app_product_liste:
+#  path: /product/list
+#  controller: App\Controller\ProductController::list
+#
+#app_product_new:
+#  path: /product/new
+#  controller: App\Controller\ProductController::new
