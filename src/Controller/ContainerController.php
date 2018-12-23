@@ -26,7 +26,7 @@ class ContainerController extends AbstractController
         $data = $containerService->getContainers();
 
 
-        return $this->render('truc/truc.html.twig', [
+        return $this->render('list_containers/list_containers.html.twig', [
             'data' => $data,
         ]);
     }
@@ -35,7 +35,7 @@ class ContainerController extends AbstractController
     {
         $data = $containerService->getContainerById($id);
 
-        return $this->render('truc/truc.html.twig', [
+        return $this->render('temp_container/container.html.twig', [
             'data' => $data,
         ]);
     }

@@ -1,0 +1,21 @@
+<h1>liste of all Product</h1>
+
+
+<table>
+    <tr>
+        <th>Id of Product</th>
+        <th> Product name</th>
+    </tr>
+
+    {% for row in data %}
+        <tr>
+            <td>{{ row.getId() }}</td>
+            <td>{{ row.getName() }}</td>
+
+        </tr>
+    {% endfor %}
+
+
+</table>
+
+

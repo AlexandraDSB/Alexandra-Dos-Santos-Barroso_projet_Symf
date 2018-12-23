@@ -1,0 +1,25 @@
+<h1>list of all containership</h1>
+
+
+<table>
+        <tr>
+                <th>Id of ccontainership</th>
+                <th> containership name</th>
+                <th> containership captain name</th>
+                <th> Id of containership limit </th>
+        </tr>
+
+                {% for row in data %}
+        <tr>
+                <td>{{ row.getId() }}</td>
+                <td>{{ row.getName() }}</td>
+                <td>{{ row.getCaptainName() }}</td>
+                <td>{{ row.getContainersLimit() }}</td>
+
+        </tr>
+                {% endfor %}
+
+
+</table>
+
+

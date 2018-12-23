@@ -9,6 +9,8 @@
 // src/Controller/LuckyController.php
 namespace App\Controller;
 
+use App\Service\ContainershipService;
+
 use Symfony\Component\HttpFoundation\Response;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,17 +21,21 @@ use Symfony\Component\Routing\Annotation\Route;
 class Containership extends AbstractController
 {
 
-    public function init()
+    public function init(ContainershipService $containershipService)
     {
+        $data = $containershipService->getcontainership();
 
-        return $this->render('truc/base.html.twig');
+        return $this->render('list_containership/list_containership.html.twig', [
+            'data' => $data,
+        ]);
     }
 
-    public function initid($id)
+    public function initid(ContainershipService $containershipService,$id)
     {
+        $data = $containershipService->getcontainershipById($id);
 
-        return $this->render('truc/base.html.twig', [
-            'id' => $id,
+        return $this->render('containership/containership_details.html.twig', [
+            'data' => $data,
         ]);
     }
 }

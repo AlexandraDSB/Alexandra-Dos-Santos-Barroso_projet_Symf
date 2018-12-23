@@ -2,14 +2,14 @@
 
 namespace App\Entity;
 
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Container
- *
- * @ORM\Table(name="CONTAINER", indexes={@ORM\Index(name="ID", columns={"ID"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ContainershipRepository")
+ * @ORM\Table(name="CONTAINERSHIP")
  */
+
 class Containership
 {
     /**
@@ -29,9 +29,9 @@ class Containership
     private $name;
 
     /**
-     * @var int
+     * @var string|null
      *
-     * @ORM\Column(name="CAPTAIN_NAME", type="integer", nullable=false)
+     * @ORM\Column(name="CAPTAIN_NAME", type="string", length=255, nullable=true)
      */
     private $captain_name;
 
@@ -48,43 +48,72 @@ class Containership
     public function getId(): int
     {
         return $this->id;
-    }/**
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id)
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @return null|string
-    */
+     */
     public function getName()
     {
         return $this->name;
-    }/**
+    }
+
+    /**
      * @param null|string $name
      */
     public function setName($name)
     {
         $this->name = $name;
-    }/**
-     * @return int
+    }
+
+    /**
+     * @return null|string
      */
-    public function getCaptainName(): int
+    public function getCaptainName()
     {
         return $this->captain_name;
-    }/**
- * @param int $captain_name
- */
-    public function setCaptainName(int $captain_name)
+    }
+
+    /**
+     * @param null|string $captain_name
+     */
+    public function setCaptainName($captain_name)
     {
         $this->captain_name = $captain_name;
-    }/**
- * @return int
- */
-    public function getContainersLimit(): int
+    }
+
+    /**
+     * @return string
+     */
+    public function getContainersLimit(): string
     {
         return $this->containers_limit;
-    }/**
- * @param int $containers_limit
- */
+    }
+
+    /**
+     * @param int $containers_limit
+     */
     public function setContainersLimit(int $containers_limit)
     {
         $this->containers_limit = $containers_limit;
     }
+
+
+
+
+
+
+
+
+
 
 
 
