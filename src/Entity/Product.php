@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marie
- * Date: 21/12/2018
- * Time: 13:41
- */
 
 namespace App\Entity;
 
@@ -14,8 +8,6 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  * @ORM\Table(name="PRODUCT")
  */
-
-
 class Product
 {
     /**
@@ -39,19 +31,19 @@ class Product
      *
      * @ORM\Column(name="LENGTH", type="integer", nullable=false)
      */
-    private $length ;
+    private $length;
 
     /**
- * @var int
- *
- * @ORM\Column(name="WIDTH", type="integer", nullable=false)
- */
+     * @var int
+     *
+     * @ORM\Column(name="WIDTH", type="integer", nullable=false)
+     */
     private $width;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="HEiGHT", type="integer", nullable=false)
+     * @ORM\Column(name="HEIGHT", type="integer", nullable=false)
      */
     private $height;
 

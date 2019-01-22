@@ -8,16 +8,19 @@
 
 // src/AppBundle/Repository/ProductRepository.php
 namespace App\Repository;
+
 use Doctrine\ORM\EntityRepository;
 
 
 class ProductRepository extends EntityRepository
 {
-    public function findAllProduct()
+    public function findAllProduct(): array
     {
         return $this->findAll();
     }
-    public function findProductById($id) {
+
+    public function findProductById($id)
+    {
         return $this->findOneBy(array('id' => $id));
     }
 }

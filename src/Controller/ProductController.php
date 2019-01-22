@@ -1,26 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marie
- * Date: 21/12/2018
- * Time: 13:51
- */
 
-// src/Controller/LuckyController.php
 namespace App\Controller;
 
 use App\Service\ProductService;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-use Symfony\Component\Routing\Annotation\Route;
-
-
-class Product extends AbstractController
+class ProductController extends AbstractController
 {
 
-    public function init(ProductService $productService)
+    public function init(ProductService $productService): Response
     {
         $data = $productService->getProduct();
 
@@ -29,7 +19,7 @@ class Product extends AbstractController
         ]);
     }
 
-    public function initid(ProductService $productService,$id)
+    public function initid(ProductService $productService, $id): Response
     {
         $data = $productService->getProductById($id);
 

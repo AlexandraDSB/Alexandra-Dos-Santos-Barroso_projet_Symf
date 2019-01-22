@@ -1,37 +1,36 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marie
- * Date: 21/12/2018
- * Time: 13:50
- */
 
 namespace App\Controller;
 
-use APP\Service\ContainerService;
-
-use Symfony\Component\HttpFoundation\Response;
-
+use App\Service\ContainerService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class ContainerController extends AbstractController
 {
 
-    public function init(ContainerService $containerService )
+    /**
+     * @param ContainerService $containerService
+     * @return Response
+     */
+    public function init(ContainerService $containerService): Response
     {
 
         $data = $containerService->getContainers();
 
 
-        return $this->render('list_containers/list_containers.html.twig', [
+        return $this->render('list_containers/truc.html.twig', [
             'data' => $data,
         ]);
     }
 
-    public function initid(ContainerService $containerService,$id)
+    /**
+     * @param ContainerService $containerService
+     * @param int $id
+     * @return Response
+     */
+    public function initid(ContainerService $containerService, $id): Response
     {
         $data = $containerService->getContainerById($id);
 

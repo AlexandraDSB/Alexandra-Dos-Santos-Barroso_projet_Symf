@@ -8,16 +8,19 @@
 
 // src/AppBundle/Repository/ProductRepository.php
 namespace App\Repository;
+
 use Doctrine\ORM\EntityRepository;
 
 
-class ContainershipRepository extends EntityRepository
+class ContainerShipRepository extends EntityRepository
 {
-    public function findAllContainership()
+    public function findAllContainerShip(): array
     {
         return $this->findAll();
     }
-    public function findContainershipById($id) {
+
+    public function findContainerShipById($id)
+    {
         return $this->findOneBy(array('id' => $id));
     }
 }

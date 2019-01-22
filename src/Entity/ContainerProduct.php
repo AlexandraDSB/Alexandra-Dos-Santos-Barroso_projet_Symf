@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marie
- * Date: 21/12/2018
- * Time: 13:42
- */
 
 namespace App\Entity;
 
 
-class Container_Product
+class ContainerProduct
 {
     /**
      * @var int
@@ -32,7 +26,7 @@ class Container_Product
      *
      * @ORM\Column(name="PRODUCT_ID", type="integer", nullable=false)
      */
-    private $product ;
+    private $product;
 
     /**
      * @var int

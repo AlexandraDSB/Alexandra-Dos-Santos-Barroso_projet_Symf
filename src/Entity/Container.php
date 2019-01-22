@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marie
- * Date: 21/12/2018
- * Time: 13:41
- */
+
 
 namespace App\Entity;
 
@@ -15,8 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="App\Repository\ContainerRepository")
  * @ORM\Table(name="CONTAINER")
  */
-
-
 class Container
 {
     /**
@@ -40,14 +33,14 @@ class Container
      *
      * @ORM\Column(name="CONTAINER_MODEL_ID", type="integer", nullable=false)
      */
-    private $container_model_id ;
+    private $containerModelId;
 
     /**
      * @var int
      *
      * @ORM\Column(name="CONTAINERSHIP_ID", type="integer", nullable=false)
      */
-    private $containership_id;
+    private $containerShipId;
 
     /**
      * @return int
@@ -86,43 +79,40 @@ class Container
      */
     public function getContainerModelId(): int
     {
-        return $this->container_model_id;
+        return $this->containerModelId;
     }
 
     /**
-     * @param int $container_model_id
+     * @param int $containerModelId
      */
-    public function setContainerModelId(int $container_model_id)
+    public function setContainerModelId(int $containerModelId)
     {
-        $this->container_model_id = $container_model_id;
+        $this->containerModelId = $containerModelId;
     }
 
     /**
      * @return int
      */
-    public function getContainershipId(): int
+    public function getContainerShipId(): int
     {
-        return $this->containership_id;
+        return $this->containerShipId;
     }
 
     /**
-     * @param int $containership_id
+     * @param int $containerShipId
      */
-    public function setContainershipId(int $containership_id)
+    public function setContainerShipId(int $containerShipId)
     {
-        $this->containership_id = $containership_id;
+        $this->containerShipId = $containerShipId;
     }
 
     public function __toString()
     {
-        if($this->id) {
+        if ($this->id) {
             return 'Container n°' . $this->id;
         }
         return 'Container without id';
     }
-
-
-
 
 
 }

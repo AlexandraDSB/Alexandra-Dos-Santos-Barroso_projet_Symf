@@ -15,19 +15,19 @@ app_containercontroller_initid:
 
 app_containership_init:
  path: /containership
- controller: App\Controller\Containership::init
+ controller: App\Controller\ContainerShipController::init
 
 app_containership_initid:
   path: /containership/{id}
-  controller: App\Controller\Containership::initid
+  controller: App\Controller\ContainerShipController::initid
 
 app_product_init:
   path: /product
-  controller: App\Controller\Product::init
+  controller: App\Controller\ProductController::init
 
 app_product_initid:
   path: /product/{id}
-  controller: App\Controller\Product::initid
+  controller: App\Controller\ProductController::initid
 
 #app_lucky_number:
 #  path: /lucky/number

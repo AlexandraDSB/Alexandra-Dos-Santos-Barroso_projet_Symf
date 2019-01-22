@@ -1,17 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marie
- * Date: 21/12/2018
- * Time: 13:41
- */
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM ;
+use Doctrine\ORM\Mapping as ORM;
 
 
-class Container_Model
+class ContainerModel
 {
     /**
      * @var int
@@ -34,7 +28,7 @@ class Container_Model
      *
      * @ORM\Column(name="LENGTH", type="integer", nullable=false)
      */
-    private $length ;
+    private $length;
 
     /**
      * @var int
@@ -46,7 +40,7 @@ class Container_Model
     /**
      * @var int
      *
-     * @ORM\Column(name="HEiGHT", type="integer", nullable=false)
+     * @ORM\Column(name="HEIGHT", type="integer", nullable=false)
      */
     private $height;
 

@@ -6,11 +6,10 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ContainershipRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ContainerShipRepository")
  * @ORM\Table(name="CONTAINERSHIP")
  */
-
-class Containership
+class ContainerShip
 {
     /**
      * @var int
@@ -33,14 +32,14 @@ class Containership
      *
      * @ORM\Column(name="CAPTAIN_NAME", type="string", length=255, nullable=true)
      */
-    private $captain_name;
+    private $captainName;
 
     /**
      * @var int
      *
      * @ORM\Column(name="CONTAINER_LIMIT", type="integer", nullable=false)
      */
-    private $containers_limit;
+    private $containerLimit;
 
     /**
      * @return int
@@ -79,44 +78,32 @@ class Containership
      */
     public function getCaptainName()
     {
-        return $this->captain_name;
+        return $this->captainName;
     }
 
     /**
-     * @param null|string $captain_name
+     * @param null|string $captainName
      */
-    public function setCaptainName($captain_name)
+    public function setCaptainName($captainName)
     {
-        $this->captain_name = $captain_name;
+        $this->captainName = $captainName;
     }
 
     /**
      * @return string
      */
-    public function getContainersLimit(): string
+    public function getContainerLimit(): string
     {
-        return $this->containers_limit;
+        return $this->containerLimit;
     }
 
     /**
-     * @param int $containers_limit
+     * @param int $containerLimit
      */
-    public function setContainersLimit(int $containers_limit)
+    public function setContainerLimit(int $containerLimit)
     {
-        $this->containers_limit = $containers_limit;
+        $this->containerLimit = $containerLimit;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
